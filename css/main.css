@@ -1,0 +1,942 @@
+@import url('footer.css');
+@import url('background.css');
+@import url('home.css');
+@import url('mediaQueries.css');
+@import url('carusel.css');
+
+
+/*Fondo y cuerpo del html*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Public Sans',
+    sans-serif;
+  margin: o;
+  padding: 0;
+}
+
+
+
+
+.margin-lg {
+  margin: 85px 0 0;
+}
+
+/*Linea de colores animada*/
+
+.animate-bg:before,
+.animate-bg:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 75px;
+  background: linear-gradient(120deg, #79fb00, #8d01a0, #031ba5, #ff004c,
+      #e6036d, #fb0094, #ff6600, #04c2e4, #adad02, #00c3ff);
+  background-size: 300%;
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  animation: BGgradient 15s ease infinite;
+}
+
+@keyframes BGgradient {
+  0% {
+    background-position: 0% 200%;
+  }
+
+  50% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: 0% 330%;
+  }
+}
+
+.animate-bg:after {
+  filter: brightness(1.4);
+
+}
+
+/*Background NavBar*/
+
+.bg-black {
+  transition: all 1s ease;
+  background-color: rgba(0, 0, 0, 1)
+}
+
+.bg-black-r {
+  background-color: rgb(0, 0, 0);
+  -webkit-backdrop-filter: saturate(120%) blur(50px);
+  backdrop-filter: saturate(120%) blur(50px);
+}
+
+
+/*REDES SOCIALES*/
+.middle {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/*Boton Facebook*/
+.btn-f {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #3b5998;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-f i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-f:hover i {
+  transform: scale(1.3);
+  color: #3b5998;
+}
+
+.btn-f::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-f:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Whatsapp*/
+.btn-w {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: #00bb2d;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-w i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-w:hover i {
+  transform: scale(1.3);
+  color: #00bb2d;
+}
+
+.btn-w::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-w:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Facebook Messenger*/
+.btn-m {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #0078FF;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.btn-m i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+  text-align: center;
+}
+
+.btn-m:hover i {
+  transform: scale(1.3);
+  color: #0078FF;
+}
+
+.btn-m::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-m:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Twitter*/
+.btn-t {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #00acee;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-t i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-t:hover i {
+  transform: scale(1.3);
+  color: #00acee;
+}
+
+.btn-t::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-t:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/* Boton Google/Youtbe */
+.btn-g {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: #db4a39;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-g i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-g:hover i {
+  transform: scale(1.3);
+  color: #db4a39;
+}
+
+.btn-g::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-g:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Instagram*/
+.btn-i {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background: #636363;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-i i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-i:hover i {
+  transform: scale(1.3);
+  color: #636363;
+}
+
+.btn-i::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-i:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton eMail*/
+.btn-e {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #E87127;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-e i {
+  line-height: 70px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-e:hover i {
+  transform: scale(1.3);
+  color: #E87127;
+}
+
+.btn-e::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-e:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Teléfono*/
+.btn-c {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #006400;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-c i {
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.btn-c:hover i {
+  transform: scale(1.3);
+  color: #006400;
+}
+
+.btn-c::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-c:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Botones Redes Sociales Tamaño Pequeño*/
+
+/*Boton Facebook #3b5998*/
+.btn-f-s {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #3b5998;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-f-s i {
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.btn-f-s:hover i {
+  transform: scale(1.3);
+  color: #3b5998;
+}
+
+.btn-f-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-f-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Whatsapp*/
+.btn-w-s {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #00bb2d;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-w-s i {
+  line-height: 90px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-w-s:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.btn-w-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #00bb2d;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-w-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Facebook Messenger*/
+.btn-m-s {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #0078FF;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-m-s i {
+  line-height: 90px;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+.btn-m-s:hover i {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.btn-m-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #0078FF;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-m-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Twitter #00acee*/
+.btn-t-s {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #00acee;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-t-s i {
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.btn-t-s:hover i {
+  transform: scale(1.3);
+  color: #00acee;
+}
+
+.btn-t-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-t-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/* Boton Google/Youtbe #db4a39 */
+.btn-g-s {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #db4a39;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-g-s i {
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.btn-g-s:hover i {
+  transform: scale(1.3);
+  color: #db4a39;
+}
+
+.btn-g-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #fff;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-g-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/*Boton Instagram #b66060 */
+.btn-i-s {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #b66060;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-i-s i {
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+
+.btn-i-s:hover i {
+  transform: scale(1.3);
+  color: #b66060;
+}
+
+.btn-i-s::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #f1f1f1;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.btn-i-s:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+/*Botón Modal Menu*/
+.btn-white {
+  color: #fff;
+  background-color: rgb(rgb(255, 255, 255), green, blue);
+  border-color: #6c757d;
+  border-radius: 15px;
+  margin: 2px;
+}
+
+.btn-white:hover {
+  color: #000;
+  background-color: rgba(255, 255, 255);
+  border-color: #fff
+}
+
+.btn-white.focus,
+.btn-white:focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 .2rem rgba(130, 138, 145, .5)
+}
+
+.btn-white.disabled,
+.btn-white:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d
+}
+
+.btn-white:not(:disabled):not(.disabled).active,
+.btn-white:not(:disabled):not(.disabled):active,
+.show>.btn-white.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b
+}
+
+.btn-white:not(:disabled):not(.disabled).active:focus,
+.btn-white:not(:disabled):not(.disabled):active:focus,
+.show>.btn-white.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgba(130, 138, 145, .5)
+}
+
+.card-img-top {
+  clip-path: circle(50% at 50% 50%);
+}
+
+
+
+p {
+  font-size: 1rem;
+}
+
+.clip-path {
+  border-radius: 3rem;
+  background: #DEDEDE;
+  color: #000;
+  padding: 5px;
+}
+
+.clip-path2 {
+  border-radius: 3rem;
+  background: green;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+
+
+
+
+/* Social CSS */
+
+.social {
+  position: fixed;
+  /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  left: 0;
+  /* Establecemos la barra en la izquierda */
+  top: 350px;
+  /* Bajamos la barra 200px de arriba a abajo */
+  z-index: 2000;
+  /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li a {
+  display: inline-block;
+  color: #fff;
+  background: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 45px;
+  ;
+  /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .facebook {
+  background: #3b5998;
+}
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .twitter {
+  background: #00abf0;
+}
+
+.social ul li .whatsapp {
+  background: #42c506;
+  ;
+}
+
+.social ul li .messenger {
+  background: #0078FF;
+  ;
+}
+
+.social ul li .email {
+  background: #E87127;
+  ;
+}
+
+
+.social ul li .telegram {
+  background: #00abf0;
+}
+
+.social ul li .youtube {
+  background: #ae181f;
+}
+
+.social ul li a:hover {
+  padding: 10px 30px;
+  border-radius: 0 15px 15px 0;
+  /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+
+li:first-child a {
+  border-radius: 0 15px 0 0;
+}
+
+li:last-child a {
+  border-radius: 0 0 15px 0;
+}
+
+/* Social CSS End */
+
+/* Slider Nosotros */
+
+.card-title {
+  color: black;
+}
+
+
+/* Slider Nosotros CSS */
+
+
+.fa-chevron-right {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-right:before {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-right:focus {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-right:hover {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-left {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-left:before {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-left:focus {
+  content: "\f054";
+  color: black;
+}
+
+.fa-chevron-left:hover {
+  content: "\f054";
+  color: black;
+}
+
+
+
+.area-md {
+  padding: 15px 15px 0 15px;
+}
+
+
+/* Tamaño del scroll */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+/* Estilos barra (thumb) de scroll */
+::-webkit-scrollbar-thumb {
+  background: rgb(134, 134, 134);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+::-webkit-scrollbar-track {
+  background: #080606;
+
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #000000;
+}

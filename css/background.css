@@ -1,0 +1,12 @@
+.wallpaper {
+
+    background: rgb(15, 0, 133);
+    background: radial-gradient(circle, rgba(15, 0, 133, 1) 0%, rgba(0, 0, 0, 1) 45%);
+
+}
+
+.wallpaper-white {
+    background: url('../img/wallpapers/wallpaper01.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
