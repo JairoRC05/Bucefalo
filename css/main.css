@@ -3,6 +3,7 @@
 @import url('home.css');
 @import url('mediaQueries.css');
 @import url('carusel.css');
+@import url('bootstrap.min.css');
 
 
 /*Fondo y cuerpo del html*/
@@ -942,7 +943,7 @@ li:last-child a {
 }
 
 
-.btn-danger {
+.btn-danger1 {
   background-color: #272F43 !important;
   color: #fff !important;
 }
