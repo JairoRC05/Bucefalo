@@ -22,7 +22,7 @@
         background-color: transparent;
         background-clip: border-box;
         border: 1px solid rgba(0, 0, 0, .125);
-        border-radius: 50%;
+
         margin-top: 35px;
     }
 
@@ -52,7 +52,7 @@
 
     .cover .banner:hover .title-red {
         text-align: center;
-        top: calc(100% - 1em);
+        top: calc(100% - 2em);
         color: white;
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 19%, rgba(3, 3, 3, 0.4154704117975315) 54%, rgba(254, 254, 254, 0) 100%);
@@ -70,7 +70,7 @@
         object-fit: cover;
         transition: all 1s ease-in-out;
         filter: grayscale(0);
-        border-radius: 15px;
+        border-radius: 5px;
     }
 
     .cover .banner:hover img {
