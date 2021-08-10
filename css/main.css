@@ -940,3 +940,9 @@ li:last-child a {
 ::-webkit-scrollbar-track:active {
   background: #000000;
 }
+
+
+.btn-danger {
+  background-color: #272F43 !important;
+  color: #fff !important;
+}
