@@ -29,7 +29,7 @@
     .cover .banner {
         flex: 1;
         transition: all 1s ease-in-out;
-        height: 100vh;
+        height: 100%;
         position: relative;
     }
 
