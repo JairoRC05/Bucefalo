@@ -54,7 +54,7 @@
         color: white;
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 19%, rgba(3, 3, 3, 0.4154704117975315) 54%, rgba(254, 254, 254, 0) 100%);
-        font-size: 2em;
+        font-size: 1.5em;
         transform: rotate(0deg) skew(0deg);
     }
 
@@ -129,7 +129,7 @@
         color: white;
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 19%, rgba(3, 3, 3, 0.4154704117975315) 54%, rgba(254, 254, 254, 0) 100%);
-        font-size: 2em;
+        font-size: 1.5em;
         transform: rotate(0deg) skew(0deg);
     }
 
