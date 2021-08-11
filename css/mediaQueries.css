@@ -21,8 +21,7 @@
         background-color: transparent;
         background-clip: border-box;
         border: 1px solid rgba(0, 0, 0, .125);
-
-        margin-top: 35px;
+        margin-top: 20px;
     }
 
     .cover .banner {
@@ -138,9 +137,7 @@
         margin-right: 0;
     }
 
-    .cover .banner:nth-child(1) {
-        margin-top: 0
-    }
+
 
     .wallpaper {
         background: rgb(0, 0, 0);
