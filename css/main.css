@@ -1008,7 +1008,7 @@ li:last-child a {
 
 @media (max-width: 760px) {
   .parallax {
-    background: url(../img/Tono/ToñoPhone.png) center center no-repeat;
+    background: url(../img/Tono/TonoPhone.png) center center no-repeat;
     background-size: cover;
     position: relative;
   }
